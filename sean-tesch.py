@@ -39,6 +39,7 @@ Use the main function for testing purposes and to show me results for all functi
 '''
 def main():
     reverse("Hello")
+    acronym("Portable Network Graphics")
 
 '''
 1. Reverse a String. Example: reverse("example"); -> "elpmaxe"
@@ -68,7 +69,11 @@ param: str
 return: str
 '''
 def acronym(phrase):
-    print("hi")
+    acro = ''
+    for x in phrase.split(" "):
+        acro += x[0]
+        acro.upper()
+    return acro
 '''
 3. Determine if a triangle is equilateral, isosceles, or scalene. An
 equilateral triangle has all three sides the same length. An isosceles

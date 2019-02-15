@@ -37,7 +37,7 @@ def main():
     print(whichTriangle(1, 12, 2))
     print(scrabble("cabbage"))
     print(sort([3,7,1,33,10]))
-    #evenAndOdds()
+    evenAndOdds()
     print(armstrong(153))
     print(primeFactors(10))
     print(pangram("the quick brown fox jumps over the lazy dog"))

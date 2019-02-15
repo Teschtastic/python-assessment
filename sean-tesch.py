@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/local/bin/python3
 
 '''
 Revature is building a new API! This API contains functions for validating data, 
@@ -39,6 +39,7 @@ def main():
     print(sort([3,7,1,33,10]))
     #evenAndOdds()
     print(armstrong(153))
+    print(primeFactors(10))
 
 
 '''
@@ -164,7 +165,7 @@ def armstrong(number):
         remain = int(temp % 10)
         sums += int(remain ** digits)
         temp /= 10
-        
+
     if number == sums:
         return True 
 	
@@ -181,7 +182,17 @@ param: int
 return: list
 '''
 def primeFactors(number):
-    print("hi")
+    factors = []
+    i = 2
+    while i * i <= number:
+        if number % i:
+            i += 1
+        else:
+            number //= i
+            factors.append(i)
+    if number > 1:
+        factors.append(number)
+    return factors
 
 '''
 7. Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan

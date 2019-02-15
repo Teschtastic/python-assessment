@@ -38,7 +38,7 @@ Happy Scripting!
 Use the main function for testing purposes and to show me results for all functions.
 '''
 def main():
-
+    reverse("Hello")
 
 '''
 1. Reverse a String. Example: reverse("example"); -> "elpmaxe"
@@ -51,7 +51,13 @@ param: str
 return: str
 '''
 def reverse(string):
-
+    string_list = []
+    y = -1
+    for x in string:
+        string_list.append(string[y])
+        y -= 1
+        new_string = ''.join(string_list)
+    return new_string
 
 '''
 2. Convert a phrase to its acronym. Techies love their TLA (Three Letter
@@ -62,7 +68,7 @@ param: str
 return: str
 '''
 def acronym(phrase):
-
+    print("hi")
 '''
 3. Determine if a triangle is equilateral, isosceles, or scalene. An
 equilateral triangle has all three sides the same length. An isosceles
@@ -75,6 +81,7 @@ param: float, float, float
 return: str -> 'equilateral', 'isoceles', 'scalene'
 '''
 def whichTriangle(sideOne, sideTwo, sideThree):
+    print("hi")
 
 
 '''
@@ -93,6 +100,7 @@ param: str
 return: int
 '''
 def scrabble(word):
+    print("hi")
 
 '''
 5. An Armstrong number is a number that is the sum of its own digits each
@@ -110,6 +118,7 @@ param: int
 return: bool
 '''
 def armstrong(number):
+    print("hi")
 
 '''
 6. Compute the prime factors of a given natural number.
@@ -121,7 +130,8 @@ Note that 1 is not a prime number.
 param: int
 return: list
 '''
-def primeFactors(number)
+def primeFactors(number):
+    print("hi")
 
 '''
 7. Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan
@@ -137,6 +147,7 @@ param: str
 return: bool
 '''
 def pangram(sentence):
+    print("hi")
 
 '''
 8. Sort list of integers.
@@ -150,6 +161,7 @@ param: list
 return: list
 '''
 def sort(numbers):
+    print("hi")
 
 '''
 9. Create an implementation of the rotational cipher, also sometimes called
@@ -181,6 +193,7 @@ param: int, str
 return: str
 '''
 def rotate(key, string):
+    print("hi")
 
 '''
 10. Take 10 numbers as input from the user and store all the even numbers in a file called even.txt and
@@ -190,6 +203,7 @@ param: none, from the keyboard
 return: nothing
 '''
 def evenAndOdds():
+    print("hi")
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     main()

@@ -36,6 +36,7 @@ def main():
     print(acronym("Portable Network Graphics"))
     print(whichTriangle(1, 12, 2))
     print(scrabble("cabbage"))
+    print(sort([3,7,1,33,10]))
 
 '''
 1. Reverse a String. Example: reverse("example"); -> "elpmaxe"
@@ -191,7 +192,16 @@ param: list
 return: list
 '''
 def sort(numbers):
-    print("hi")
+    length = len(numbers)
+    for x in range(length-1):
+        swap = False
+        for y in range(length-1-x):
+            if numbers[y] > numbers[y+1]:
+                swap = True
+                numbers[y], numbers[y+1] = numbers[y+1], numbers[y]
+        if not swap: break
+    return numbers
+
 
 '''
 9. Create an implementation of the rotational cipher, also sometimes called

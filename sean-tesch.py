@@ -37,7 +37,9 @@ def main():
     print(whichTriangle(1, 12, 2))
     print(scrabble("cabbage"))
     print(sort([3,7,1,33,10]))
-    evenAndOdds()
+    #evenAndOdds()
+    print(armstrong(153))
+
 
 '''
 1. Reverse a String. Example: reverse("example"); -> "elpmaxe"
@@ -51,10 +53,9 @@ return: str
 '''
 def reverse(string):
     string_list = []
-    y = -1
-    for x in string:
-        string_list.append(string[y])
-        y -= 1
+    for x in range(1, len(string) + 1):
+        x *= -1
+        string_list.append(string[x])
         new_string = ''.join(string_list)
     return new_string
 
@@ -150,7 +151,24 @@ param: int
 return: bool
 '''
 def armstrong(number):
-    print("hi")
+    sums = 0
+    digits = 0
+    
+    temp = int(number) 
+    while int(temp) != 0:
+        digits += 1
+        temp /= 10
+    
+    temp = int(number)
+    while int(temp) != 0:
+        remain = int(temp % 10)
+        sums += int(remain ** digits)
+        temp /= 10
+        
+    if number == sums:
+        return True 
+	
+    return False
 
 '''
 6. Compute the prime factors of a given natural number.

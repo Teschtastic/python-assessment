@@ -1,2 +1,2 @@
 # python-assessment
-python assessment for training
+Training questions given to gain proficiency in Python.

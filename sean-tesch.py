@@ -26,12 +26,6 @@ up since you can be asked.
 7) Don't import external libraries which are not python native
 
 8) Don't change the parameters or returns, follow the directions.
-
-9) Assignment is due on Monday (9:00 am), send assigment to Trainer through Slack
-
-Happy Scripting!
-
-© 2018 Revature. All rights reserved.
 '''
 
 '''
@@ -41,6 +35,7 @@ def main():
     print(reverse("Hello"))
     print(acronym("Portable Network Graphics"))
     print(whichTriangle(1, 12, 2))
+    print(scrabble("cabbage"))
 
 '''
 1. Reverse a String. Example: reverse("example"); -> "elpmaxe"
@@ -111,7 +106,31 @@ param: str
 return: int
 '''
 def scrabble(word):
-    print("hi")
+    new_word = word.upper()
+    one = ('A','E','I','O','U','L','N','R','S','T')
+    two = ('D','G')
+    three = ('B','C','M','P')
+    four = ('F','H','V','W','Y')
+    five = ('K')
+    eight = ('J','X')
+    ten = ('Q','Z')
+    score = 0
+    for x in new_word:
+        if x in one:
+           score +=1 
+        elif x in two:
+            score += 2
+        elif x in three:
+            score += 3
+        elif x in four:
+            score += 4
+        elif x in five:
+            score += 5
+        elif x in eight:
+            score += 8
+        elif x in ten:
+            score += 10
+    return(score)
 
 '''
 5. An Armstrong number is a number that is the sum of its own digits each

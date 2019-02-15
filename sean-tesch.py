@@ -37,6 +37,7 @@ def main():
     print(whichTriangle(1, 12, 2))
     print(scrabble("cabbage"))
     print(sort([3,7,1,33,10]))
+    evenAndOdds()
 
 '''
 1. Reverse a String. Example: reverse("example"); -> "elpmaxe"
@@ -243,7 +244,18 @@ param: none, from the keyboard
 return: nothing
 '''
 def evenAndOdds():
-    print("hi")
+    n = input()
+    numbers = list(map(int, n.split()))
+    even = open("even.txt", "w")
+    odd = open("odd.txt", "w")
+    for x in numbers:
+        if x % 2 == 0:
+            even.write(str(x) + '\n')
+        if x % 2 == 1:
+            odd.write(str(x) + '\n')
+    even.close()
+    odd.close()
+
 
 if __name__ == "__main__":
     main()

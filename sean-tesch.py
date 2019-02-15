@@ -41,6 +41,7 @@ def main():
     print(armstrong(153))
     print(primeFactors(10))
     print(pangram("the quick brown fox jumps over the lazy dog"))
+    print(rotate(12, "Hello there"))
 
 
 '''
@@ -212,7 +213,7 @@ def pangram(sentence):
     sentence = sentence.lower()
     sentence = set(sentence)
     alpha = ""
-    
+
     for ch in sentence:
         if ord(ch) in range(ord('a'), ord('z')+1):
             alpha += ch
@@ -276,7 +277,16 @@ param: int, str
 return: str
 '''
 def rotate(key, string):
-    print("hi")
+    result = "" 
+    for i in range(len(string)): 
+        char = string[i] 
+        if (char.isupper()): 
+            result += chr((ord(char) + key-65) % 26 + 65)
+        elif char == ' ':
+            result += ' '
+        else: 
+            result += chr((ord(char) + key-97) % 26 + 97) 
+    return result 
 
 '''
 10. Take 10 numbers as input from the user and store all the even numbers in a file called even.txt and

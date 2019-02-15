@@ -40,6 +40,7 @@ def main():
     #evenAndOdds()
     print(armstrong(153))
     print(primeFactors(10))
+    print(pangram("the quick brown fox jumps over the lazy dog"))
 
 
 '''
@@ -208,7 +209,19 @@ param: str
 return: bool
 '''
 def pangram(sentence):
-    print("hi")
+    sentence = sentence.lower()
+    sentence = set(sentence)
+    alpha = ""
+    
+    for ch in sentence:
+        if ord(ch) in range(ord('a'), ord('z')+1):
+            alpha += ch
+
+    if len(alpha) == 26: 
+        return True
+    else: 
+        return False
+    
 
 '''
 8. Sort list of integers.

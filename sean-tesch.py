@@ -38,8 +38,9 @@ Happy Scripting!
 Use the main function for testing purposes and to show me results for all functions.
 '''
 def main():
-    reverse("Hello")
-    acronym("Portable Network Graphics")
+    print(reverse("Hello"))
+    print(acronym("Portable Network Graphics"))
+    print(whichTriangle(1, 12, 2))
 
 '''
 1. Reverse a String. Example: reverse("example"); -> "elpmaxe"
@@ -86,7 +87,12 @@ param: float, float, float
 return: str -> 'equilateral', 'isoceles', 'scalene'
 '''
 def whichTriangle(sideOne, sideTwo, sideThree):
-    print("hi")
+    if sideOne == sideTwo == sideThree:
+        return('equilateral')
+    elif sideOne != sideTwo != sideThree:
+        return('scalene')
+    else:
+        return('isoceles')
 
 
 '''
